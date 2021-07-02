@@ -127,6 +127,24 @@
   font-size: 24px;
 }
 
+.main2 .section.map .floor {
+  position: relative;
+  margin-bottom: -70px;
+}
+.main2 .section.map .floor:last-child {
+  margin-bottom: 0;
+}
+.main2 .section.map .floor p {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.main2 .section.map img {
+  width: 100%;
+}
+
 .events {
   display: flex;
   justify-content: space-between;
