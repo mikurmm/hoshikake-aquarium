@@ -95,7 +95,7 @@
   transform: translateY(-200px) translateX(-200px);
   width: 100px;
   height: 50px;
-  background-image: url(./images/流れ星.png);
+  background-image: url(./images/shooting-star.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
