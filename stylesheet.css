@@ -1,3 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  background: radial-gradient(circle at 50% 50px, #9dffff 0, #0365ff 80vh);
+}
+#backgrounds {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
 .main h1 {
-  color: blue;
+  position: absolute;
+  top: 200px;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  font-size: 80px;
+  color: white;
+  font-weight: normal;
+
+  font-family: 'RocknRoll One', sans-serif;
+
+  text-shadow:
+    1px 0 0 gray,
+    0 1px 0 gray,
+    -1px 0 0 gray,
+    0 -1px 0 gray;
+}
+
+#partials {
+  position: fixed;
+  top: 0;
+}
+#sound-player {
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+  cursor: pointer;
+
+  transform-origin: center;
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+#sound-player:hover {
+  transform: scale(1.1);
+}
+#sound-player img {
+}
+#sound-player .mute {
+  transform: rotate(45deg);
+  width: 90px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 35px;
+  left: -10px;
+}
+
+.keyvisual {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: 100px;
+}
+.keyvisual .info-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+.keyvisual .info-right .row-parent {
+  border-bottom: 1px solid lightgray;
+  padding: 10px 0;
+  display: flex;
+}
+.keyvisual .info-right .row-child {
+  display: flex;
+}
+.keyvisual .info-right .row-child .bold {
+  font-weight: bold;
+  color: yellow;
+}
+.keyvisual .info-right .icon {
+  margin-right: 10px;
+}
+.keyvisual .info-right .header {
+  font-weight: bold;
+  width: 120px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.main2 {
+  width: 800px;
+  margin: auto;
+  color: white;
+}
+.main2 .section {
+  margin-bottom: 200px;
+}
+.main2 .section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.events {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+}
+.events .event {
+  width: 350px;
+}
+.events .event h4 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+.events .event p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+.events .event-partition {
+  height: 100%;
+  width: 3px;
+  border-radius: 5px;
+  background-color: white;
+}
+.events .event .canvas {
+  height: 100%;
+  position: relative;
+}
+.events .event .canvas img {
+  position: absolute;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }

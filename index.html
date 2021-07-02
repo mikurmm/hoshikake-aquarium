@@ -4,12 +4,179 @@
   <meta charset="utf-8">
   <title>mikurmm - 星駆水族館</title>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="animation.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="main">
-    <h1>星駆水族館</h1>
+  <div id="wrapper">
+    <div class="main">
+      <div id="bgms">
+        <audio src="./sounds/水中.mp3" loop volume="0.8"></audio>
+        <audio src="./sounds/bgm.mp3" loop volume="0.2"></audio>
+      </div>
+      <div id="sounds">
+        <audio id="sound-shooting-star" src="./sounds/流れ星.mp3"></audio>
+        <audio id="sound-meteor-shower" src="./sounds/流星群.mp3"></audio>
+        <audio id="sound-owl" src="./sounds/ふくろう.mp3"></audio>
+        <audio id="sound-whale" src="./sounds/くじら.mp3"></audio>
+      </div>
+      <div id="backgrounds">
+        <div id="fish-ellipse">
+          <div class="duration40 w80 h40 s065" src="./images/魚群.png"></div>
+          <div class="duration44 w80 h40 s075" src="./images/魚群.png"></div>
+          <div class="duration48 w80 h40 s085" src="./images/魚群.png"></div>
+          <div class="duration52 w80 h40 s095" src="./images/魚群.png"></div>
+          <div class="duration52 w80 h40 s095" src="./images/魚群.png"></div>
+          <div class="duration56 w80 h40 s105" src="./images/魚群.png"></div>
+          <div class="duration60 w80 h40 s115" src="./images/魚群.png"></div>
+          <div class="duration64 w80 h40 s125" src="./images/魚群.png"></div>
+          <div class="duration58 w80 h40 s125" src="./images/魚群.png"></div>
+          <div class="duration44 w80 h40 s113" src="./images/魚群.png"></div>
+
+          <div class="duration44 w70 h70 s070" src="./images/エンゼルフィッシュ1.png"></div>
+          <div class="duration46 w70 h70 s080" src="./images/エンゼルフィッシュ1.png"></div>
+          <div class="duration48 w70 h70 s090" src="./images/エンゼルフィッシュ1.png"></div>
+          <div class="duration50 w70 h70 s100" src="./images/エンゼルフィッシュ1.png"></div>
+          <div class="duration52 w70 h70 s110" src="./images/エンゼルフィッシュ1.png"></div>
+          <div class="duration56 w70 h70 s120" src="./images/エンゼルフィッシュ1.png"></div>
+
+          <div class="duration44 w70 h70 s065" src="./images/エンゼルフィッシュ2.png"></div>
+          <div class="duration46 w70 h70 s075" src="./images/エンゼルフィッシュ2.png"></div>
+          <div class="duration48 w70 h70 s085" src="./images/エンゼルフィッシュ2.png"></div>
+          <div class="duration50 w70 h70 s095" src="./images/エンゼルフィッシュ2.png"></div>
+          <div class="duration52 w70 h70 s105" src="./images/エンゼルフィッシュ2.png"></div>
+          <div class="duration54 w70 h70 s115" src="./images/エンゼルフィッシュ2.png"></div>
+          <div class="duration56 w70 h70 s125" src="./images/エンゼルフィッシュ2.png"></div>
+
+          <div class="duration48 w70 h40 s068" src="./images/クマノミ.png"></div>
+          <div class="duration48 w70 h40 s075" src="./images/クマノミ.png"></div>
+          <div class="duration51 w70 h40 s084" src="./images/クマノミ.png"></div>
+          <div class="duration51 w70 h40 s094" src="./images/クマノミ.png"></div>
+          <div class="duration54 w70 h40 s108" src="./images/クマノミ.png"></div>
+          <div class="duration54 w70 h40 s113" src="./images/クマノミ.png"></div>
+          <div class="duration58 w70 h40 s120" src="./images/クマノミ.png"></div>
+
+          <div class="duration56 w60 h40 s065" src="./images/くらげ白.png"></div>
+          <div class="duration60 w60 h40 s078" src="./images/くらげ白.png"></div>
+          <div class="duration64 w60 h40 s104" src="./images/くらげ白.png"></div>
+          <div class="duration67 w60 h40 s110" src="./images/くらげ白.png"></div>
+          <div class="duration70 w60 h40 s115" src="./images/くらげ白.png"></div>
+
+          <div class="duration57 w60 h40 s093" src="./images/くらげ黒.png"></div>
+          <div class="duration61 w60 h40 s097" src="./images/くらげ黒.png"></div>
+          <div class="duration66 w60 h40 s102" src="./images/くらげ黒.png"></div>
+          <div class="duration70 w60 h40 s108" src="./images/くらげ黒.png"></div>
+          <div class="duration73 w60 h40 s119" src="./images/くらげ黒.png"></div>
+
+          <div class="duration46 w60 h40 s065" src="./images/グッピー.png"></div>
+          <div class="duration48 w60 h40 s075" src="./images/グッピー.png"></div>
+          <div class="duration50 w60 h40 s085" src="./images/グッピー.png"></div>
+          <div class="duration52 w60 h40 s095" src="./images/グッピー.png"></div>
+          <div class="duration54 w60 h40 s105" src="./images/グッピー.png"></div>
+
+          <div class="duration44 w130 h90 s130" src="./images/シャチ.png"></div>
+          <div class="duration49 w130 h90 s140" src="./images/シャチ.png"></div>
+
+          <div class="duration42 w130 h90 s125" src="./images/イルカ.png"></div>
+          <div class="duration47 w130 h90 s135" src="./images/イルカ.png"></div>
+        </div>
+      </div>
+
+      <h1>星駆水族館</h1>
+
+      <div class="keyvisual">
+        <div class="info-right">
+          <div class="row-parent">
+            <img class="icon" src="./images/時計白.png" width="40px" height="40px"></img>
+            <div class="row-children">
+              <div class="row-child">
+                <div class="header">通常</div>
+                <div class="body">
+                  <p>平日10:00 〜 17:00 (最終入場 16:30)</p>
+                  <p>(火曜日休館)</p>
+                </div>
+              </div>
+              <div class="row-child">
+                <div class="header">ナイトツアー</div>
+                <div class="body">
+                  <p>4月~10月: 19:30 〜 21:00</p>
+                  <p>11月~3月: 18:30 〜 20:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-parent">
+            <img class="icon" src="./images/円.png" width="36px" height="36px"></img>
+            <div class="row-children">
+              <div class="row-child">
+                <div class="header">通常</div>
+                <div class="body">
+                  <p>子供1,200円 大人2,400円</p>
+                </div>
+              </div>
+              <div class="row-child">
+                <div class="header">ナイトツアー</div>
+                <div class="body">
+                  <p>子供1,000円 大人2,000円</p>
+                </div>
+              </div>
+              <div class="row-child">
+                <p class="bold">夏休み期間限定7月8月は小学生ナイトツアー半額500円</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main2">
+
+        <div class="section events">
+          <div class="event">
+            <h4>イルカショー</h4>
+            <p>毎日 11時~, 13時~, 15時~ の3回開催します。<br>元気なイルカ達の凄技をぜひご覧あれ！</p>
+            <div class="canvas dolphin-show">
+              <img src="./images/イルカ白反転.png" width="130px" height="90px" class="dolphin f1">
+              <img src="./images/イルカ白.png" width="130px" height="90px" class="dolphin f2">
+              <img src="./images/シャチ白.png" width="130px" height="90px" class="dolphin f3">
+              <img src="./images/ビーチボール.png" width="50px" height="50px" class="ball">
+            </div>
+          </div>
+          <div class="event-partition"></div>
+          <div class="event">
+            <h4>クラゲエリア</h4>
+            <p>多種多様なクラゲ達がぷかぷか浮いています。<br>自由気ままなクラゲ達に癒される空間です！</p>
+            <div class="canvas jellyfish-area">
+              <img src="./images/くらげ白縦.png" width="40px" height="60px" class="jellyfish f1">
+              <img src="./images/くらげ黒縦.png" width="40px" height="60px" class="jellyfish f2">
+              <img src="./images/くらげ黒縦.png" width="40px" height="60px" class="jellyfish f3">
+              <img src="./images/くらげ黒縦.png" width="40px" height="60px" class="jellyfish f4">
+              <img src="./images/くらげ白縦.png" width="40px" height="60px" class="jellyfish f5">
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="address">福井県あわら市星駆6番地28号</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47218.20110093778!2d136.2164163702699!3d36.23369738032203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8efd2ba2fe767%3A0xaccfd83b4273bac5!2z56aP5LqV55yM44GC44KP44KJ5biC!5e0!3m2!1sja!2sjp!4v1625250348237!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="footer">Copyright © mikur_mm All Rights Reserved.</div>
+
+    </div>
+
+    <div id="partials">
+    </div>
+    <div id="sound-player">
+      <div class="mute"></div>
+      <img src="./images/スピーカー.png" width="70px" height="70px">
+    </div>
   </div>
-  <script src="script.js"></script>
+  <script src="animation.js"></script>
+  <script src="sounds.js"></script>
 </body>
 </html>

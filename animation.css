@@ -1,0 +1,163 @@
+#fish-ellipse {
+  width: 700px;
+  height: 400px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+}
+
+#fish-ellipse > div {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+}
+
+#fish-ellipse .animation { animation-iteration-count: infinite; transform-origin: center; }
+#fish-ellipse .animation.single { animation-timing-function: ease-in-out; animation-direction: alternate; }
+#fish-ellipse .animation.double { animation-timing-function: linear; }
+
+#fish-ellipse .vertical {
+  position: relative;
+  animation-name: vertical-move;
+}
+#fish-ellipse .horizontal {
+  position: absolute;
+  animation-name: horizontal-move;
+}
+#fish-ellipse .rotate {
+  animation-name: rotate;
+  animation-timing-function: linear;
+}
+#fish-ellipse img {
+  position: absolute;
+  animation-name: scale;
+}
+
+@keyframes vertical-move {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(400px); }
+}
+@keyframes horizontal-move {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(700px); }
+}
+@keyframes rotate {
+  0%   { transform: rotate(-180deg); }
+  100% { transform: rotate(180deg); }
+}
+@keyframes scale {
+  0%   { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+.v-bubble {
+  position: absolute;
+  transform: translateY(100vh);
+
+  animation-name: v-bubble;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+.h-bubble {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+  opacity: 0.8;
+
+  animation-name: h-bubble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+@keyframes v-bubble {
+  0%   { transform: translateY(100vh); }
+  100% { transform: translateY(-50px); }
+}
+@keyframes h-bubble {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(100px); }
+}
+
+.shooting-star {
+  position: absolute;
+  animation-name: shooting-star;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+
+  transform: translateY(-200px) translateX(-200px);
+  width: 100px;
+  height: 50px;
+  background-image: url(./images/流れ星.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes shooting-star {
+  0%   { transform: translateX(130vw)  translateY(-100px); }
+  100% { transform: translateX(-300px) translateY(50vh); }
+}
+
+.dolphin-show .dolphin {
+  animation-name: dolphin-play;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+.dolphin-show .f1 {
+  top: 30px;
+  left: 40px;
+}
+.dolphin-show .f2 {
+  top: 100px;
+  right: 0;
+  animation-delay: -0.5s;
+}
+.dolphin-show .f3 {
+  top: 170px;
+  left: 100px;
+  animation-delay: -1.5s;
+}
+@keyframes dolphin-play {
+  from { transform: rotate(-30deg); }
+  to   { transform: rotate(30deg); }
+}
+.dolphin-show .ball {
+  animation-name: ball-bounce;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  top: 47px;
+  right: 88px;
+  animation-delay: -1.5s;
+}
+@keyframes ball-bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-60px); }
+}
+
+.jellyfish-area .jellyfish {
+  animation-name: jellyfish-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-direction: alternate;
+}
+.jellyfish-area .f1 { top: 60px; left: 50px; animation-delay: -0.5s; }
+.jellyfish-area .f2 { top: 70px; left: 140px; animation-delay: -0.8s; }
+.jellyfish-area .f3 { top: 80px; left: 230px; animation-delay: -1.8s; }
+.jellyfish-area .f4 { top: 190px; left: 100px; animation-delay: -2.7s; }
+.jellyfish-area .f5 { top: 210px; left: 170px; animation-delay: -3.8s; }
+@keyframes jellyfish-float {
+  0%   { transform: translateX(0)    translateY(0); }
+  50%  { transform: translateX(10px) translateY(-40px); }
+  100% { transform: translateX(20px) translateY(0); }
+}
